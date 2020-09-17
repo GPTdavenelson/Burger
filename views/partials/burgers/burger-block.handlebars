@@ -1,0 +1,19 @@
+<style>
+	.burger{
+		padding:15px;
+		margin-bottom:10px;
+		background:#f7e8d0;
+		border-radius: 15px;
+		border:solid 1px #000
+	}
+</style>
+
+<div class="burger">
+	{{burger_name}}
+	{{#if devoured}}
+		<button class="change-status" data-id="{{id}}" data-devoured="{{devoured}}">
+			Devour it!
+		</button>{{else}}
+		Devoured
+	{{/if}}
+</div>
