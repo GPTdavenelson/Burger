@@ -1,13 +1,12 @@
 // Set up MySQL connection.
-var mysql = require('mysql');
+const mysql = require('mysql');
 
-var connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: 'root',
-    database: 'burgers_db',
-});
+// Listens to what enviornment is running from start script (package.json)
+// and uses the correct MySql configuration from config.json
+const env = process.env.NODE_ENV || 'development'; // defaults to development if none configured
+const config = require('./config.json')[env];
+
+let connection = mysql.createConnection(config);
 
 // Make connection.
 connection.connect(function (err) {
@@ -18,5 +17,4 @@ connection.connect(function (err) {
     console.log('connected as id ' + connection.threadId);
 });
 
-// Export connection for our ORM to use.
 module.exports = connection;
