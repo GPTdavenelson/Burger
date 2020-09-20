@@ -1,6 +1,6 @@
 # Unit 13 MVC Homework: Burger Logger
 
-![gif](burger-demo.gif)
+![gif](readme.gif)
 
 [Live Demo on Heroku](https://davenelson-burger-logger.herokuapp.com/)
 
