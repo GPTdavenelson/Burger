@@ -53,6 +53,8 @@ var orm = {
 
         connection.query(queryString, vals, function (err, result) {
             if (err) {
+                console.log(queryString);
+
                 throw err;
             }
 
