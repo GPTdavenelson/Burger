@@ -14,9 +14,7 @@ const config =
         user: process.env.DB_USER,
         password: process.env.DB_PASS,
         database: "heroku_e904f3c24c0202f",
-        host: process.env.CLEARDB_DATABASE_URL,
-        port: 3306,
-        dialect: "mysql"
+        host: process.env.DB_HOST,
     }
 }
 module.exports = config
