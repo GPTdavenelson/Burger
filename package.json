@@ -5,14 +5,11 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "start-production": "NODE_ENV=production node server.js",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "sync":"npm run sync:DB_USER && npm run sync:DB_PASS && npm run sync:CLEARDB_DATABASE_URL",
-        "sync:DB_USER":"heroku config:get DB_USER -s  >> .env --app davenelson-burger-logger",
-        "sync:DB_PASS":"heroku config:get DB_PASS -s  >> .env --app davenelson-burger-logger",
-        "sync:CLEARDB_DATABASE_URL":"heroku config:get CLEARDB_DATABASE_URL -s  >> .env --app davenelson-burger-logger"
-
-
+        "sync": "npm run sync:DB_USER && npm run sync:DB_PASS && npm run sync:CLEARDB_DATABASE_URL",
+        "sync:DB_USER": "heroku config:get DB_USER -s  >> .env --app davenelson-burger-logger",
+        "sync:DB_PASS": "heroku config:get DB_PASS -s  >> .env --app davenelson-burger-logger",
+        "sync:CLEARDB_DATABASE_URL": "heroku config:get CLEARDB_DATABASE_URL -s  >> .env --app davenelson-burger-logger"
     },
     "engines": {
         "node": "~12.13.0",
