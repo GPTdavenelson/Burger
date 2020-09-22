@@ -1,8 +1,6 @@
 // Set up MySQL connection.
 const mysql = require('mysql');
 
-// Listens to what enviornment is running from start script (package.json)
-// and uses the correct MySql configuration from config.json
 const env = process.env.NODE_ENV || 'development'; // defaults to development if none configured
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
